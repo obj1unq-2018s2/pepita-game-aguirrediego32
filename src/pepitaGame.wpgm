@@ -24,8 +24,8 @@ program PepitaGame {
 	keyboard.v().onPressDo { pepita.volaHacia(villaGesell) }
 	keyboard.b().onPressDo { pepita.volaHacia(buenosAires) }
 // COLISIONES
-	game.whenCollideDo(pepita, { personaje => personaje.alimentar(pepita) })
-	game.whenCollideDo(alpiste, { personaje => personaje.encontrarAlimento(alpiste) })
+	game.whenCollideDo(roque, { algo => algo.colisionar(roque) })
+
 // START	
 	game.start()
 }

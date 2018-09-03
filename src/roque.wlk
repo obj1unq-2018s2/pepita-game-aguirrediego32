@@ -15,9 +15,9 @@ object roque {
 			game.removeVisual(alimentoDeAve)
 			alimentoDeAve = null
 			posicionRandom = game.at(1.randomUpTo(10), 1.randomUpTo(10))
-		}else{game.say(self, "No hay mas alimento "
+		}else{game.say(self, "No hay mas alimento ")
 			
-		}
+		 }
 	}
 	method encontrarAlimento(comida){
 		if(alimentoDeAve != null){
@@ -30,4 +30,3 @@ object roque {
 		}
 	}
 }
-

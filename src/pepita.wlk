@@ -14,19 +14,16 @@ object pepita {
 	}
 	
 	method volaHacia(unaCiudad) {
-		if (ciudad != unaCiudad) {
+		if (ciudad != unaCiudad and self.energia()>20 ) {
 			self.move(unaCiudad.posicion())
 			ciudad = unaCiudad
 		}
-		if(self.energia()<10){
+		if(self.energia()<20){
 			game.say(self,"Dame de comer Primero")}
 		else  {self.seQueja()
 			}
 		}
 
-		
-			
-	
 	
 	method energiaParaVolar(distancia) = 15 + 5 * distancia
 
@@ -38,5 +35,10 @@ object pepita {
 	game.say(self,"ya estoy en ciudad !")
 			
 		}
+		method colisionar(entrenador){
+			 entrenador.alimentar(self)
+		}
 	}
+	// clone sirve para clonar//
+	// up(n) para poner la siguiente posicion//
 	
