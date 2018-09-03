@@ -10,4 +10,4 @@ object alpiste {
 	method energia() = 5
 	method alimentar(personaje){}
 
-}
+}// falta terminar//

@@ -19,10 +19,12 @@ object pepita {
 			ciudad = unaCiudad
 		}
 		if(self.energia()<10){
-			game.say(self,"Dame de comer Primero")
-		else {self.seQueja()
-		}	
+			game.say(self,"Dame de comer Primero")}
+		else  {self.seQueja()
+			}
 		}
+
+		
 			
 	
 	
@@ -36,6 +38,5 @@ object pepita {
 	game.say(self,"ya estoy en ciudad !")
 			
 		}
+	}
 	
-	}	
-}
