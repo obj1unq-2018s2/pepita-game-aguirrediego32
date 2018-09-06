@@ -3,7 +3,7 @@ import pepita.*
 
 object roque {
 	var property posicion = game.at(4, 4)
-	var property alimentoDeAve = alpiste
+	var property alimentoDeAve = null
 	var posicionRandom = game.at(1.randomUpTo(10), 1.randomUpTo(10))
 	
 	method imagen() = "jugador.png"
@@ -12,22 +12,30 @@ object roque {
 		if(alimentoDeAve != null){
 			personaje.come(alimentoDeAve)
 			game.addVisualIn(alimentoDeAve,posicionRandom)
-			game.removeVisual(alimentoDeAve)
 			alimentoDeAve = null
 			posicionRandom = game.at(1.randomUpTo(10), 1.randomUpTo(10))
-		}else{game.say(self, "No hay mas alimento "
+		}else{game.say(self, "No hay mas alimento ")
 			
-		}
+		 }
+	}
+	method tieneAlimento(){
+		return alimentoDeAve!=null
 	}
 	method encontrarAlimento(comida){
-		if(alimentoDeAve != null){
-			game.addVisualIn(alimentoDeAve,posicion)
-			alimentoDeAve = comida
-			game.removeVisual(comida)
-			game.say(self,"tengo alimento")
-		}else{(alimentoDeAve=null)
-			alimentoDeAve=comida
+		if(self.tieneAlimento()){
+			self.soltarLaComidaActual()
+			self.agarrar(comida)
+		}else{
+			self.agarrar(comida)
 		}
 	}
+	method agarrar(comida){
+		alimentoDeAve= comida
+		game.removeVisual(comida)
+	}
+	method soltarLaComidaActual(){
+	if(alimentoDeAve != null)
+	game.addVisualIn(alimentoDeAve,posicion.down(1))
+	alimentoDeAve=null
+	}
 }
-
