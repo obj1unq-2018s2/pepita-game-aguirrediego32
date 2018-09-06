@@ -58,5 +58,3 @@ object pepita {
 		}
 	}	
 }
-	// clone sirve para clonar//
-	// up(n) para poner la siguiente posicion//
