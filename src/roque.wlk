@@ -34,8 +34,15 @@ object roque {
 		game.removeVisual(comida)
 	}
 	method soltarLaComidaActual(){
+<<<<<<< HEAD
 	if(alimentoDeAve != null)
 	game.addVisualIn(alimentoDeAve,posicion.down(1))
 	alimentoDeAve=null
 	}
 }
+=======
+	alimentoDeAve = null
+	game.addVisualIn(alimentoDeAve,posicion.up())
+	}
+}
+>>>>>>> branch 'master' of https://github.com/obj1unq-2018s2/pepita-game-aguirrediego32.git

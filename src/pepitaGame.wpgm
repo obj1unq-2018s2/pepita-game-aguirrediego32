@@ -25,6 +25,10 @@ program PepitaGame {
 	keyboard.b().onPressDo { pepita.volaHacia(buenosAires) }
 // COLISIONES
 	game.whenCollideDo(roque, { algo => algo.colisionar(roque) })
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/obj1unq-2018s2/pepita-game-aguirrediego32.git
 // START	
 	game.start()
 }
